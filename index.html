@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+      </style>
+</head>
+<body class="bg-slate-700">
+
+  <div class="loading flex hidden justify-center items-center fixed inset-0 backdrop-blur py-20">
+    <img src="./images/loading.png" alt="loading" width="100" />
+  </div>
+
+  <div class="user-wrapper rounded-lg w-[80%] bg-slate-900 p-5 shadow-2xl mx-auto mt-[30px] space-y-3">
+    <h2 class="text-[30px] mb-6 text-white text-center">USER PROFILS</h2>
+  </div>
+
+  
+
+
+    <div class="hidden user-Inform " >
+      <button onclick="gotoBackUsersPart()" class="bg-slate-900 w-full shadow-2xl px-[40px] py-[15px] mb-[10px]">
+        <img src="./images/back.svg" alt="back icon" width="50">
+      </button>
+        <ul class="users-list p-5 space-y-2 ">
+          
+        </ul>
+        <ul class="Posts space-y-2 flex flex-col  items-center justify-center   mt-[40px]"></ul>
+    </div>
+ 
+    <div class="Comments-wrapper hidden" >
+      <button onclick="gotoBackPosts()" class="bg-slate-900 w-full shadow-2xl px-[40px] py-[15px] mb-[10px]">
+        <img src="./images/back.svg" alt="back icon" width="50">
+      </button>
+        <h2 class="text-center mt-4 text-[45px] font-bold leading-[33px] text-white">Comments</h2>
+        <ul class="comments-list space-y-2 flex flex-col items-center justify-center   rounded-2xl mt-[40px]">
+         
+        </ul>
+    </div>
+        
+    <script src="./js/main.js"></script>
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+</body>
+</html>
