@@ -31,6 +31,7 @@ fetch("https://jsonplaceholder.typicode.com/users").then(res => res.json()).then
 
 // Show information about user start
 function handleShowinformation(id) {
+    elPosts.innerHTML = null
     userWrapper.classList.add("hidden")
     elLoading.classList.remove("hidden")
      fetch(`https://jsonplaceholder.typicode.com/users?id=${id}`).then(res => res.json()).then( data  => {
@@ -124,6 +125,7 @@ function renderPosts(posts) {
 
 // Show comments start
 function handleShowComment(id){
+    elCommentsList.innerHTML = null
     userInformations.classList.add("hidden")
     elLoading.classList.remove("hidden")
     fetch(`https://jsonplaceholder.typicode.com/comments?postId=${id}`).then(res => res.json()).then(data  => {
